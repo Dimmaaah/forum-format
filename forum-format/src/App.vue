@@ -1,8 +1,6 @@
 
 
 <template>
-  <div>
-    App of iets anders
-  </div>
+ <router-view />
 </template>
 
