@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers;
-
+use App\Http\Controllers\PostShowController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +15,9 @@ use App\Http\Controllers;
 |
 */
 
-Route::get('/posts', App\Http\Controllers\PostIndexController::class);
+Route::get('/api/posts', App\Http\Controllers\PostIndexController::class);
+Route::get('/api/posts/{post:slug}', PostShowController::class);
+
 
 Route::get('/', function () {
     return view('welcome');
